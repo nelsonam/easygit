@@ -1,64 +1,101 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="(easy)git : Making git easy" />
 
-  <title>(easy)git</title>
-  <meta name="description" content="Making git easy">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>(easy)git</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nelsonam/easygit">View on GitHub</a>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">(easy)git</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Making git easy</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/nelsonam/easygit/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/nelsonam/easygit/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/nelsonam/easygit" class="code">View (easy)git on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-<a name="easygit" class="anchor" href="#easygit"><span class="octicon octicon-link"></span></a>(easy)git</h3>
+          <h1 id="project_title">(easy)git</h1>
+          <h2 id="project_tagline">Making git easy</h2>
 
-<p>Making git easy</p>
-        </article>
-      </div>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/nelsonam/easygit/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/nelsonam/easygit/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/nelsonam" class="avatar"><img src="https://avatars0.githubusercontent.com/u/557945?s=60" width="48" height="48"/></a> <a href="https://github.com/nelsonam">nelsonam</a> maintains <a href="https://github.com/nelsonam/easygit">(easy)git</a></p>
 
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="i-am-starting-fresh-i-need-a-copy-of-the-repo" class="anchor" href="#i-am-starting-fresh-i-need-a-copy-of-the-repo"><span class="octicon octicon-link"></span></a>I am starting fresh. I need a copy of the repo.</h3>
 
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <p class="name"></p>
-  </div>
+<p><code>git clone &lt;the path to the repository&gt;</code></p>
 
-  
-</body>
+<h3>
+<a name="ive-made-changes-to-the-code-on-my-end-and-i-want-to-save-the-state-on-my-machine-for-later" class="anchor" href="#ive-made-changes-to-the-code-on-my-end-and-i-want-to-save-the-state-on-my-machine-for-later"><span class="octicon octicon-link"></span></a>I've made changes to the code on my end and I want to save the state on my machine for later.</h3>
+
+<p><code>git commit -m "your commit message here"</code></p>
+
+<p>Note: this will only commit files that you have added via <code>git add &lt;filename&gt;</code>. This allows you to commit only files that you want. If you want to commit all the tracked files in your working directory each time, use:</p>
+
+<p><code>git commit -am "your commit message"</code></p>
+
+<h3>
+<a name="i-want-to-push-the-changes-to-the-remote-server-allowing-the-other-members-of-my-team-to-see-and-use-them" class="anchor" href="#i-want-to-push-the-changes-to-the-remote-server-allowing-the-other-members-of-my-team-to-see-and-use-them"><span class="octicon octicon-link"></span></a>I want to push the changes to the remote server, allowing the other members of my team to see and use them.</h3>
+
+<p><code>git pull origin master</code> (see below for discussion about pull errors)</p>
+
+<p>then</p>
+
+<ul>
+<li><p><code>git add file1.lisp file2.py</code> (replace with the files you want to add)</p></li>
+<li><p><code>git commit -m "your message"</code></p></li>
+<li><p>OR</p></li>
+<li><p><code>git commit -am "your message"</code> (see above for the difference)</p></li>
+</ul><p>then...</p>
+
+<p><code>git push origin master</code></p>
+
+<h3>
+<a name="help-it-says-i-need-to-pull-first" class="anchor" href="#help-it-says-i-need-to-pull-first"><span class="octicon octicon-link"></span></a>Help! it says I need to pull first!</h3>
+
+<p>Yes, you are correct. It is good practice to do a <code>git pull origin master</code> before you start coding for the day, but sometimes we forget, and sometimes someone has pushed something before you. If this happens, run:</p>
+
+<p><code>git pull origin master</code></p>
+
+<ul>
+<li>
+<h4>
+<a name="ran-into-an-error-never-fear" class="anchor" href="#ran-into-an-error-never-fear"><span class="octicon octicon-link"></span></a>Ran into an error? Never fear...</h4>
+
+<ul>
+<li>
+<strong>Case 1: I tried to pull changes and it gave me a bunch of merge conflicts! Scary!</strong>
+
+<ul>
+<li>Here's what you should do:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">(easy)git maintained by <a href="https://github.com/nelsonam">nelsonam</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
